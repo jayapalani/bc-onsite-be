@@ -16,6 +16,7 @@ const schema = new mongoose.Schema({
         default: 0,
 	},
 	parentId: {
+        required: true,
 		type: mongoose.Schema.Types.ObjectId,
 	},
 	projectId: {
