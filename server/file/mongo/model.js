@@ -10,7 +10,6 @@ const schema = new mongoose.Schema({
     name: {
         required: true,
         type: String,
-        unique: true,
     },
 	size: {
         type: Number,

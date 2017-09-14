@@ -5,11 +5,8 @@ const findById = require('../query/find-by-id')
 
 module.exports = (req, res, next) => {
     const query = req.query
-    const params = {}
-    params.name = req.body.name
-    params.projectId = query.projectId
-    params.type = 'FOLDER'
-    if (query.parentId == '') {
+    const params = {name: req.body.name, projectId: query.projectId, type: 'FOLDER'}
+    if (query.parentId === '') {
         query.parentId = query.projectId
     }
     params.parentId = query.parentId
